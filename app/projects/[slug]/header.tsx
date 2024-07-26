@@ -1,5 +1,5 @@
 "use client";
-import { ArrowLeft, Eye, Github, Twitter } from "lucide-react";
+import { ArrowLeft, Eye, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 
@@ -19,13 +19,13 @@ export const Header: React.FC<Props> = ({ project }) => {
   if (project.repository) {
     links.push({
       label: "GitHub",
-      href: `https://github.com/${project.repository}`,
+      href: `https://github.com/jakhongirav`,
     });
   }
   if (project.url) {
     links.push({
       label: "Website",
-      href: project.url,
+      href: "/",
     });
   }
   useEffect(() => {
@@ -65,8 +65,8 @@ export const Header: React.FC<Props> = ({ project }) => {
 								views,
 							)} */}
             </span>
-            <Link target="_blank" href="https://twitter.com/chronark_">
-              <Twitter
+            <Link target="_blank" href="https://linkedin.com/in/jakhongir-av">
+              <Linkedin
                 className={`w-6 h-6 duration-200 hover:font-medium ${
                   isIntersecting
                     ? " text-zinc-400 hover:text-zinc-100"
@@ -74,7 +74,7 @@ export const Header: React.FC<Props> = ({ project }) => {
                 } `}
               />
             </Link>
-            <Link target="_blank" href="https://github.com/chronark">
+            <Link target="_blank" href="https://github.com/jakhongirav">
               <Github
                 className={`w-6 h-6 duration-200 hover:font-medium ${
                   isIntersecting
