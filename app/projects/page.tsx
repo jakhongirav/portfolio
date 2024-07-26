@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { allProjects } from "contentlayer/generated";
+import { Project as ContentLayerProject } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
@@ -199,13 +200,28 @@ export default function ProjectsPage() {
 
         <div className="grid grid-cols-1 gap-4 mx-auto lg:mx-0 md:grid-cols-3">
           <Card key={"0"}>
-            <Article project={project} date="Jun 17, 2024" />
+            <Article
+              slug={project.slug}
+              title={project.title}
+              description={project.description}
+              date="Jun 17, 2024"
+            />
           </Card>
           <Card key={"1"}>
-            <Article project={project} date="Aug 25, 2022" />
+            <Article
+              slug={project.slug}
+              title={project.title}
+              description={project.description}
+              date="Aug 25, 2022"
+            />
           </Card>
           <Card key={"2"}>
-            <Article project={project} date="Aug 25, 2022" />
+            <Article
+              slug={project.slug}
+              title={project.title}
+              description={project.description}
+              date="Aug 25, 2022"
+            />
           </Card>
         </div>
       </div>
