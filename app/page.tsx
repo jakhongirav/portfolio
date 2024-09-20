@@ -5,13 +5,17 @@ import Particles from "./components/particles";
 const navigation = [
   { name: "Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },
+  {
+    name: "Resume",
+    href: "https://drive.google.com/file/d/1HN_uxErQIBaYyZ_rWlzWuQ0czucFOaL6/view?usp=sharing",
+  },
 ];
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-t  via-zinc-600/20 ">
       <nav className="my-16 animate-fade-in">
-        <ul className="flex items-center justify-center gap-4">
+        <ul className="flex items-center justify-center gap-7">
           {navigation.map((item) => (
             <Link
               key={item.href}
