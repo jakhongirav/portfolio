@@ -41,6 +41,9 @@ dependencies:
   next-contentlayer:
     specifier: ^0.3.4
     version: 0.3.4(contentlayer@0.3.4)(esbuild@0.23.1)(markdown-wasm@1.2.0)(next@13.5.7)(react-dom@18.3.1)(react@18.3.1)
+  prettier:
+    specifier: ^3.3.3
+    version: 3.3.3
   react:
     specifier: ^18.2.0
     version: 18.3.1
@@ -3263,6 +3266,12 @@ packages:
       picocolors: 1.1.0
       source-map-js: 1.2.1
     dev: true
+
+  /prettier@3.3.3:
+    resolution: {integrity: sha512-i2tDNA0O5IrMO757lfrdQZCc2jPNDVntV0m/+4whiDfWaTKfMNgR7Qz0NAeGz/nRqF4m5/6CLzbP4/liHt12Ew==}
+    engines: {node: '>=14'}
+    hasBin: true
+    dev: false
 
   /property-information@6.5.0:
     resolution: {integrity: sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig==}

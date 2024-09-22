@@ -15,13 +15,6 @@ export const metadata: Metadata = {
     description: "Software engineer",
     url: "https://jakhongirav.life",
     siteName: "jakhongirav",
-    // images: [
-    //   {
-    //     url: "https://chronark.com/og.png",
-    //     width: 1920,
-    //     height: 1080,
-    //   },
-    // ],
     locale: "en-US",
     type: "website",
   },
@@ -35,10 +28,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  twitter: {
-    title: "Jakhongirav",
-    card: "summary_large_image",
   },
   icons: {
     shortcut: "/favicon.png",
