@@ -7,14 +7,14 @@ import { Analytics } from "./components/analytics";
 export const metadata: Metadata = {
   title: {
     default: "Jile L",
-    template: "%s | jakhongir.av",
+    template: "%s | jakhongirav",
   },
   description: "Software engineer",
   openGraph: {
     title: "jakhongir.av",
     description: "Software engineer",
-    url: "https://jakhongirav.vercel.app",
-    siteName: "jakhongir.av",
+    url: "https://jakhongirav.life",
+    siteName: "jakhongirav",
     // images: [
     //   {
     //     url: "https://chronark.com/og.png",

@@ -7,7 +7,7 @@ const navigation = [
   { name: "Contact", href: "/contact" },
   {
     name: "Resume",
-    href: "https://drive.google.com/file/d/1HN_uxErQIBaYyZ_rWlzWuQ0czucFOaL6/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1RuOb5B6fUWQ4riELfsroLW1ktSALwkNu/view?usp=sharing",
   },
 ];
 
@@ -18,6 +18,7 @@ export default function Home() {
         <ul className="flex items-center justify-center gap-7">
           {navigation.map((item) => (
             <Link
+              target={item.name === "Resume" ? "_blank" : ""}
               key={item.href}
               href={item.href}
               className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
