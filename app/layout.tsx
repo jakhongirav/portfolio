@@ -23,6 +23,12 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    // Configuration for Google's crawler settings
+    // - index: Allows the page to be indexed by Google
+    // - follow: Enables Google to follow links on the page
+    // - max-video-preview: Sets the maximum size of video previews in search results
+    // - max-image-preview: Allows large image previews in search results
+    // - max-snippet: Defines the maximum length of text snippets in search results
     googleBot: {
       index: true,
       follow: true,
