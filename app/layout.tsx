@@ -53,16 +53,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-      <head>
-        <Analytics />
-      </head>
-      <body
-        className={`bg-black ${
-          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
-        }`}
-      >
+    <html
+      lang="en"
+      className={[inter.variable, calSans.variable].join(" ")}
+      suppressHydrationWarning
+    >
+      <body className="bg-black">
         {children}
+        <Analytics />
       </body>
     </html>
   );
