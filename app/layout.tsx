@@ -1,7 +1,7 @@
 import "../global.css";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { Analytics } from "./components/analytics";
 
 // Metadata for SEO and social sharing
