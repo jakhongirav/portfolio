@@ -14,6 +14,7 @@ const Project = defineDocumentType(() => ({
     date: { type: "date", required: true },
     repository: { type: "string", required: false },
     url: { type: "string", required: false },
+    published: { type: "boolean", required: true, default: false },
   },
   computedFields: {
     slug: {
