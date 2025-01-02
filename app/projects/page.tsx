@@ -3,7 +3,6 @@ import React from "react";
 import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
-import { Article } from "./article";
 
 export const revalidate = 60;
 
@@ -16,9 +15,7 @@ export default function ProjectsPage() {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const iosProjects = allProjects
-    .filter(
-      (project) => project.slug.includes("xray-scanner") && project.published
-    )
+    .filter((project) => project.slug.includes("xray-scanner"))
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
@@ -31,7 +28,7 @@ export default function ProjectsPage() {
           </h2>
           <p className="mt-4 text-zinc-400">
             Some of the projects I've worked on in my journey as a software
-            developer.
+            engineer.
           </p>
         </div>
 
@@ -48,7 +45,7 @@ export default function ProjectsPage() {
             {frontendProjects.map((project) => (
               <Card key={project.slug}>
                 <Link href={`/projects/${project.slug}`}>
-                  <article className="relative w-full h-full p-4 md:p-8">
+                  <div className="relative w-full h-full p-4 md:p-8">
                     <div className="flex items-center justify-between gap-2">
                       <div className="text-xs text-zinc-100">
                         {project.date ? (
@@ -74,7 +71,7 @@ export default function ProjectsPage() {
                         Read more <span aria-hidden="true">&rarr;</span>
                       </p>
                     </div>
-                  </article>
+                  </div>
                 </Link>
               </Card>
             ))}
@@ -95,7 +92,7 @@ export default function ProjectsPage() {
             {iosProjects.map((project) => (
               <Card key={project.slug}>
                 <Link href={`/projects/${project.slug}`}>
-                  <article className="relative w-full h-full p-4 md:p-8">
+                  <div className="relative w-full h-full p-4 md:p-8">
                     <div className="flex items-center justify-between gap-2">
                       <div className="text-xs text-zinc-100">
                         {project.date ? (
@@ -121,7 +118,7 @@ export default function ProjectsPage() {
                         Read more <span aria-hidden="true">&rarr;</span>
                       </p>
                     </div>
-                  </article>
+                  </div>
                 </Link>
               </Card>
             ))}
