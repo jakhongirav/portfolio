@@ -2,7 +2,7 @@ import "../global.css";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
-import { Analytics } from "./components/analytics";
+// import { Analytics } from "./components/analytics";
 
 // Metadata for SEO and social sharing
 export const metadata: Metadata = {
@@ -64,9 +64,9 @@ export default function RootLayout({
       className={[inter.variable, calSans.variable].join(" ")}
       suppressHydrationWarning
     >
-      <body className="bg-black">
+      <body className="bg-[#173025]">
         {children}
-        <Analytics />
+        {/* <Analytics /> */}
       </body>
     </html>
   );
