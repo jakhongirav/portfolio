@@ -7,15 +7,19 @@ import { Card } from "../components/card";
 export const revalidate = 60;
 
 export default function ProjectsPage() {
-  // Separate projects into Frontend and iOS
   const frontendProjects = allProjects
     .filter(
-      (project) => !project.slug.includes("xray-scanner") && project.published
+      (project) =>
+        !project.slug.includes("xray-scanner") &&
+        !project.slug.includes("wordly")
     )
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   const iosProjects = allProjects
-    .filter((project) => project.slug.includes("xray-scanner"))
+    .filter(
+      (project) =>
+        project.slug.includes("xray-scanner") || project.slug.includes("wordly") // Use OR (||) instead of AND (&&)
+    )
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
@@ -85,7 +89,7 @@ export default function ProjectsPage() {
             IOS Development
           </h3>
           <p className="text-zinc-400 mb-8">
-            Native iOS applications built with Swift, CoreML, and other Apple
+            Native iOS applications built with UIkit, SwiftUI, and other Apple
             frameworks.
           </p>
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
